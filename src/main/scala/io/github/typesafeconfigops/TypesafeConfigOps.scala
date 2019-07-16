@@ -1,6 +1,6 @@
 package io.github.typesafeconfigops
 
-import com.typesafe.config.Config
+import com.typesafe.config.{Config, ConfigValueFactory}
 
 import scala.collection.JavaConverters._
 
@@ -34,6 +34,15 @@ object TypesafeConfigOps {
     def getLongList(path: String, default: List[Long]): List[Long] = c.optLongList(path).getOrElse(default)
     def getStringList(path: String, default: List[String]): List[String] = c.optStringList(path).getOrElse(default)
     def getBigDecimalList(path: String, default: List[BigDecimal]): List[BigDecimal] = c.optBigDecimalList(path).getOrElse(default)
+  }
+
+
+  implicit class ConfigTemplateOps(c: Config) {
+    def getTemplate(path: String): String = c.getString(path)
+    def formatTemplate(path: String, args: Any*): String = c.getString(path).format(args: _*)
+    def resolveTemplate(args: (String, Any)*): Config = {
+      (c /: args) { case (cfg, (k, v)) => cfg.withValue(k, ConfigValueFactory.fromAnyRef(v)) }.resolve()
+    }
   }
 
 }
