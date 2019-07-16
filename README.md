@@ -1,6 +1,7 @@
 # ${Typesafe} %Config .Ops
 
 [![Build Status](https://travis-ci.org/typesafeconfigops/TypesafeConfigOps.svg?branch=master)](https://travis-ci.org/typesafeconfigops/TypesafeConfigOps)
+[ ![Download](https://api.bintray.com/packages/typesafeconfigops/maven/typesafeconfigops/images/download.svg) ](https://bintray.com/typesafeconfigops/maven/typesafeconfigops/_latestVersion)
 
 ### ConfigOptOps
 Import `TypesafeConfigOps.ConfigOptOps` allows to extract optional values from configuration.
