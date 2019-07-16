@@ -4,7 +4,7 @@ import com.typesafe.config.{Config, ConfigValueFactory}
 
 import scala.collection.JavaConverters._
 
-object TypesafeConfigOps {
+trait TypesafeConfigOps {
 
   implicit class ConfigOptOps(c: Config) {
     def optConfig(path: String): Option[Config] = if (c.hasPath(path)) Option(c.getConfig(path)) else None
@@ -46,3 +46,5 @@ object TypesafeConfigOps {
   }
 
 }
+
+object TypesafeConfigOps extends TypesafeConfigOps
