@@ -3,10 +3,10 @@ jdk:
   - oraclejdk8
 script:
   - sbt clean test  
-script:
-  - sbt clean coverage test
-after_success:
-  -sbt coverageReport coveralls
+# script:
+#  - sbt clean coverage test
+# after_success:
+#  -sbt coverageReport coveralls
 cache:
   directories:
     - $HOME/.sbt
