@@ -22,6 +22,9 @@ class ConfigDefaultOpsTest  extends WordSpec with Matchers {
       |  lList = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048]
       |  bdList = ["3.14", 2.7]
       |  sList = ["a", b, c, d, "e", f]
+      |  Doom = {
+      |    tgm = IDDQD
+      |  }
       |}
     """.stripMargin)
 
@@ -117,6 +120,14 @@ class ConfigDefaultOpsTest  extends WordSpec with Matchers {
 
     "return default value for non existing list of BigDecimal" in {
       cfg.getBigDecimalList("bdListX", List[BigDecimal](1.01, 2.02)) shouldBe List[BigDecimal](1.01, 2.02)
+    }
+
+    "return value of existing config" in {
+      cfg.getConfig("Doom", cfg) shouldBe ConfigFactory.parseString("""{ tgm = IDDQD }""")
+    }
+
+    "return None for non existing config" in {
+      cfg.getConfig("Morrowind", cfg) shouldBe cfg
     }
 
   }
