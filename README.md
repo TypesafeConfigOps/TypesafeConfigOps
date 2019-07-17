@@ -1,5 +1,6 @@
 # ${Typesafe} %Config .Ops
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/83a505b53f004ad19bcc55fe6d483b56)](https://app.codacy.com/app/lashchenko/TypesafeConfigOps?utm_source=github.com&utm_medium=referral&utm_content=typesafeconfigops/TypesafeConfigOps&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.org/typesafeconfigops/TypesafeConfigOps.svg?branch=master)](https://travis-ci.org/typesafeconfigops/TypesafeConfigOps)
 [ ![Download](https://api.bintray.com/packages/typesafeconfigops/maven/typesafeconfigops/images/download.svg) ](https://bintray.com/typesafeconfigops/maven/typesafeconfigops/_latestVersion)
 
