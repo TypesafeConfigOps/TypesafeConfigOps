@@ -1,4 +1,4 @@
-name := "TypesafeConfigOps"
+name := "Typesafe-Config-Ops"
 organization := "io.github.typesafeconfigops"
 
 version := "0.1.2"
