@@ -1,9 +1,9 @@
 
-name := "TypesafeConfigOps"
+name := "Typesafe-Config-Ops"
 
-version := "1.3.4"
+version := "1.4.1"
 
-description := "Useful extension and DSL created for Typesafe Config that allows to work with optional values, default values and templates."
+description := "Useful extension and DSL created for Typesafe Config. It allows us to work with optional values, default values and templates."
 licenses := List("Apache 2" -> new URL("http://www.apache.org/licenses/LICENSE-2.0.txt"))
 homepage := Some(url("https://typesafeconfigops.github.io"))
 
