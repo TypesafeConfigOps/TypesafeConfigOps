@@ -13,7 +13,8 @@ scalacOptions ++= Seq(
   "-Ywarn-unused:params"
 )
 
-parallelExecution in Test := true
+Test / parallelExecution := true
+Test / fork := true
 
 libraryDependencies += "com.typesafe" % "config" % "1.3.4"
 
