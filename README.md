@@ -3,13 +3,11 @@
 [![codecov](https://codecov.io/gh/typesafeconfigops/TypesafeConfigOps/branch/master/graph/badge.svg)](https://codecov.io/gh/typesafeconfigops/TypesafeConfigOps)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/83a505b53f004ad19bcc55fe6d483b56)](https://app.codacy.com/app/lashchenko/TypesafeConfigOps?utm_source=github.com&utm_medium=referral&utm_content=typesafeconfigops/TypesafeConfigOps&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.org/typesafeconfigops/TypesafeConfigOps.svg?branch=master)](https://travis-ci.org/typesafeconfigops/TypesafeConfigOps)
-[![Download](https://api.bintray.com/packages/typesafeconfigops/maven/typesafe-config-ops/images/download.svg)](https://bintray.com/typesafeconfigops/maven/typesafe-config-ops/_latestVersion)
 
 ### Usage
 ```scala
 // build.sbt
-resolvers += Resolver.bintrayRepo("typesafeconfigops", "maven")
-libraryDependencies += "io.github.typesafeconfigops" %% "typesafe-config-ops" % "0.1.2"
+libraryDependencies += "io.github.typesafeconfigops" %% "typesafeconfigops" % "0.1.2"
 ```
 
 ### ConfigOptOps
