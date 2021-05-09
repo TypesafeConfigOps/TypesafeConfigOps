@@ -55,6 +55,6 @@ scalacOptions ++= Seq(
 Test / parallelExecution := true
 Test / fork := true
 
-libraryDependencies += "com.typesafe" % "config" % "1.3.4"
+libraryDependencies += "com.typesafe" % "config" % "1.4.1"
 
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % Test
