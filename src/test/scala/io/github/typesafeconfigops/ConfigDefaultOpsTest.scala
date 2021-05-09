@@ -1,9 +1,12 @@
 package io.github.typesafeconfigops
 
 import com.typesafe.config.ConfigFactory
-import org.scalatest.{Matchers, WordSpec}
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.wordspec.AnyWordSpec
 
-class ConfigDefaultOpsTest  extends WordSpec with Matchers {
+class ConfigDefaultOpsTest
+  extends AnyWordSpec
+  with Matchers {
 
   import TypesafeConfigOps.ConfigDefaultOps
 

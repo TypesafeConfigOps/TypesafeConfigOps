@@ -57,4 +57,5 @@ Test / fork := true
 
 libraryDependencies += "com.typesafe" % "config" % "1.4.1"
 
-libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % Test
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.8" % Test
+
