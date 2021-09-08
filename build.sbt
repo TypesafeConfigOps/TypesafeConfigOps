@@ -1,7 +1,7 @@
 
 name := "Typesafe-Config-Ops"
 
-version := "1.4.1"
+version := "1.4.2"
 
 description := "Useful extension and DSL created for Typesafe Config. It allows us to work with optional values, default values and templates."
 licenses := List("Apache 2" -> new URL("http://www.apache.org/licenses/LICENSE-2.0.txt"))
@@ -42,7 +42,9 @@ publishMavenStyle := true
 publishConfiguration := publishConfiguration.value.withOverwrite(true)
 
 
-scalaVersion := "2.12.12"
+scalaVersion := "2.13.6"
+
+crossScalaVersions := Seq("2.12.14")
 
 scalacOptions ++= Seq(
   "-explaintypes",
@@ -57,5 +59,5 @@ Test / fork := true
 
 libraryDependencies += "com.typesafe" % "config" % "1.4.1"
 
-libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.8" % Test
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.9" % Test
 
