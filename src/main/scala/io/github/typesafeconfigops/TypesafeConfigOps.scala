@@ -41,7 +41,7 @@ trait TypesafeConfigOps {
     def getTemplate(path: String): String = c.getString(path)
     def formatTemplate(path: String, args: Any*): String = c.getString(path).format(args: _*)
     def resolveTemplate(args: (String, Any)*): Config = {
-      (c /: args) { case (cfg, (k, v)) => cfg.withValue(k, ConfigValueFactory.fromAnyRef(v)) }.resolve()
+      args.foldLeft(c) { case (cfg, (k, v)) => cfg.withValue(k, ConfigValueFactory.fromAnyRef(v)) }.resolve()
     }
   }
 
