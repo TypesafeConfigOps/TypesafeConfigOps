@@ -7,7 +7,7 @@
 ### Usage
 ```scala
 // build.sbt
-libraryDependencies += "io.github.typesafeconfigops" %% "typesafe-config-ops" % "1.4.1"
+libraryDependencies += "io.github.typesafeconfigops" %% "typesafe-config-ops" % "1.4.1.1"
 ```
 
 ### ConfigOptOps
@@ -22,7 +22,7 @@ cfg.optInt("ix") // None
 ```
 
 ### ConfigDefaultOps
-Import `TypesafeConfigOps.ConfigDefaultOps` allows to use default values for non existing paths in configuration.
+Import `TypesafeConfigOps.ConfigDefaultOps` allows using default values for non-existing paths in configuration.
 
 ```scala
 import TypesafeConfigOps.ConfigDefaultOps
