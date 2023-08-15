@@ -1,7 +1,7 @@
 
 name := "Typesafe-Config-Ops"
 
-version := "1.4.1.1"
+version := "1.4.2.1"
 
 description := "Useful extension and DSL created for Typesafe Config. It allows us to work with optional values, default values and templates."
 licenses := List("Apache 2" -> new URL("http://www.apache.org/licenses/LICENSE-2.0.txt"))
@@ -44,7 +44,7 @@ publishConfiguration := publishConfiguration.value.withOverwrite(true)
 
 scalaVersion := "3.3.0"
 
-crossScalaVersions := Seq("2.12.18", "2.13.11")
+crossScalaVersions := Seq("2.13.11")
 
 scalacOptions ++= Seq(
   "-deprecation"
