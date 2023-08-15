@@ -2,7 +2,7 @@ package io.github.typesafeconfigops
 
 import com.typesafe.config.{Config, ConfigValueFactory}
 
-import scala.collection.JavaConverters._
+import scala.jdk.CollectionConverters._
 
 trait TypesafeConfigOps {
 

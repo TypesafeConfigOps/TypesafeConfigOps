@@ -42,9 +42,9 @@ publishMavenStyle := true
 publishConfiguration := publishConfiguration.value.withOverwrite(true)
 
 
-scalaVersion := "3.0.2"
+scalaVersion := "3.3.0"
 
-crossScalaVersions := Seq("2.12.15", "2.13.7")
+crossScalaVersions := Seq("2.12.18", "2.13.11")
 
 scalacOptions ++= Seq(
   "-deprecation"
@@ -53,7 +53,7 @@ scalacOptions ++= Seq(
 Test / parallelExecution := true
 Test / fork := true
 
-libraryDependencies += "com.typesafe" % "config" % "1.4.1"
+libraryDependencies += "com.typesafe" % "config" % "1.4.2"
 
-libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.9" % Test
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.16" % Test
 
