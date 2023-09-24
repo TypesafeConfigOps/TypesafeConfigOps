@@ -6,11 +6,11 @@
 ### Usage
 ```scala
 // build.sbt
-libraryDependencies += "io.github.typesafeconfigops" %% "typesafe-config-ops" % "1.4.2.1"
+libraryDependencies += "io.github.typesafeconfigops" %% "typesafe-config-ops" % "1.5"
 ```
 
 ### ConfigOptOps
-Import `TypesafeConfigOps.ConfigOptOps` allows to extract optional values from configuration.
+Import `TypesafeConfigOps.*` `ConfigOptOps.*` allows to extract optional values from configuration.
 
 ```scala
 import TypesafeConfigOps.ConfigOptOps
@@ -21,7 +21,7 @@ cfg.optInt("ix") // None
 ```
 
 ### ConfigDefaultOps
-Import `TypesafeConfigOps.ConfigDefaultOps` allows using default values for non-existing paths in configuration.
+Import `TypesafeConfigOps.*` or `ConfigDefaultOps.*` allows using default values for non-existing paths in configuration.
 
 ```scala
 import TypesafeConfigOps.ConfigDefaultOps
@@ -31,7 +31,7 @@ cfg.getInt("i", 2) // 1
 cfg.getInt("ix", 2) // 2
 ```
 ### ConfigTemplateOps
-Import `TypesafeConfigOps.ConfigTemplateOps` allows to work with templates in configuration.
+Import `TypesafeConfigOps.*` or `ConfigTemplateOps.*` allows to work with templates in configuration.
 
 ```scala
 import TypesafeConfigOps.ConfigTemplateOps
