@@ -4,14 +4,11 @@ import com.typesafe.config.ConfigFactory
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpec
 
-class ConfigDefaultOpsTest
-  extends AnyWordSpec
-  with Matchers {
+class ConfigDefaultOpsTest extends AnyWordSpec with Matchers {
 
-  import TypesafeConfigOps.ConfigDefaultOps
+  import ConfigDefaultOps.*
 
-  private val cfg = ConfigFactory.parseString(
-    """
+  private val cfg = ConfigFactory.parseString("""
       |{
       |  i = 1
       |  l = 1024

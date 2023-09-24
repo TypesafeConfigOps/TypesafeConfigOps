@@ -4,17 +4,14 @@ import com.typesafe.config.ConfigFactory
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpec
 
-class ConfigTemplateOpsTest
-  extends AnyWordSpec
-  with Matchers {
+class ConfigTemplateOpsTest extends AnyWordSpec with Matchers {
 
-  import TypesafeConfigOps.ConfigTemplateOps
+  import ConfigTemplateOps.*
 
   "ConfigTemplateOps" should {
 
     "format template" in {
-      val cfg = ConfigFactory.parseString(
-        """
+      val cfg = ConfigFactory.parseString("""
           |{
           |  code = "<img src='%s' height=%d width=%d border='#%X%X%X' />"
           |}
@@ -26,8 +23,7 @@ class ConfigTemplateOpsTest
     }
 
     "resolve template" in {
-      val cfg = ConfigFactory.parseString(
-        """
+      val cfg = ConfigFactory.parseString("""
           |{
           |  code = <img ${imgSrc} ${imgHeight} ${imgWidth} ${imgBorder} />
           |}
@@ -35,18 +31,18 @@ class ConfigTemplateOpsTest
 
       val code = cfg
         .resolveTemplate(
-          "imgSrc" -> "src='https://google.com/logo.png'",
+          "imgSrc"    -> "src='https://google.com/logo.png'",
           "imgHeight" -> "height='100px'",
-          "imgWidth" -> "width='200px'",
-          "imgBorder" -> "border='#FFFFFF'")
+          "imgWidth"  -> "width='200px'",
+          "imgBorder" -> "border='#FFFFFF'"
+        )
         .getTemplate("code")
 
       code shouldBe "<img src='https://google.com/logo.png' height='100px' width='200px' border='#FFFFFF' />"
     }
 
     "resolve and format template" in {
-      val cfg = ConfigFactory.parseString(
-        """
+      val cfg = ConfigFactory.parseString("""
           |{
           |  code = <img ${imgSrc} ${imgHeight} ${imgWidth} ${imgBorder} />
           |}
@@ -54,10 +50,11 @@ class ConfigTemplateOpsTest
 
       val code = cfg
         .resolveTemplate(
-          "imgSrc" -> "src='%s'",
+          "imgSrc"    -> "src='%s'",
           "imgHeight" -> "height='%dpx'",
-          "imgWidth" -> "width='%dpx'",
-          "imgBorder" -> "border='#%X%X%X'")
+          "imgWidth"  -> "width='%dpx'",
+          "imgBorder" -> "border='#%X%X%X'"
+        )
         .formatTemplate("code", "https://google.com/logo.png", 100, 200, 255, 255, 255)
 
       code shouldBe "<img src='https://google.com/logo.png' height='100px' width='200px' border='#FFFFFF' />"

@@ -8,7 +8,7 @@ class ConfigOptOpsTest
   extends AnyWordSpec
   with Matchers {
 
-  import TypesafeConfigOps.ConfigOptOps
+  import ConfigOptOps.*
 
   private val cfg = ConfigFactory.parseString(
     """
