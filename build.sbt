@@ -1,6 +1,6 @@
 name := "Typesafe-Config-Ops"
 
-version := "3.0"
+version := "3.1"
 
 description := "Useful extension and DSL created for Typesafe Config. It allows us to work with optional values, default values and templates."
 licenses    := List("Apache 2" -> new URL("http://www.apache.org/licenses/LICENSE-2.0.txt"))
@@ -49,6 +49,6 @@ scalacOptions ++= Seq(
 Test / parallelExecution := true
 Test / fork              := true
 
-libraryDependencies += "com.typesafe" % "config" % "1.4.2"
+libraryDependencies += "com.typesafe" % "config" % "1.4.3"
 
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.17" % Test
